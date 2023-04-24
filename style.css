@@ -34,20 +34,20 @@ button {
 
 .top__hamburger-container--icon-close {
   display: none;
-
 }
 
 .top__nav {
   display: none;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: left;
-  gap: 2rem;
+  gap: 1.5rem;
 
   background-color: grey;
 
   position: fixed;
-  z-index: 1;;
+  z-index: 1;
+  justify-content: left;
+  max-width: 10rem;
 }
 
 .home {

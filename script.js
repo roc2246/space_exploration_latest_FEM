@@ -7,18 +7,19 @@ const navToggle = {
     "top__hamburger-container--icon-close"
   )[0],
   nav: document.getElementsByClassName("top__nav")[0],
+  setDisplay: (nav, hamburger, close) => {
+    navToggle.nav.style.display = nav;
+    navToggle.hamburger.style.display = hamburger;
+    navToggle.close.style.display = close;
+  },
   toggle: () => {
     const condition =
       navToggle.nav.style.display === "none" ||
       navToggle.nav.style.display === "";
     if (condition) {
-      navToggle.nav.style.display = "flex";
-      navToggle.hamburger.style.display = "none";
-      navToggle.close.style.display = "inline-block";
+      navToggle.setDisplay("flex", "none", "inline-block");
     } else {
-      navToggle.nav.style.display = "none";
-      navToggle.hamburger.style.display = "inline-block";
-      navToggle.close.style.display = "none";
+      navToggle.setDisplay("none", "inline-block", "none");
     }
   },
 };
