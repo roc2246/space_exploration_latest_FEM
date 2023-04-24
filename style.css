@@ -1,0 +1,55 @@
+html{
+    font-size: 16px;
+}
+
+button{
+    cursor: pointer;
+}
+
+
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.top__logo-box{
+    display: none;
+}
+
+.top__line-box{
+    display: none;
+}
+
+.top__hamburger-container{
+    border: none;
+    background-color: transparent;
+}
+
+.top__hamburger-container--icon-close{
+    display: none;
+}
+
+.top__nav{
+    display: none;
+}
+
+
+.home{
+   display: grid;
+}
+
+.home__blurb{
+    max-width: 20rem;
+}
+
+.home__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid;
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+}

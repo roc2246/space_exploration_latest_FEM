@@ -1,27 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <header class="top">
+      <div class="top__logo-box">
+        <img
+          src="assets/shared/logo.svg"
+          alt="Logo"
+          class="top__logo-box--img"
+        />
+      </div>
+      <div class="top__line-box">
+        <hr class="top__line-box--line" />
+      </div>
+      <button class="top__hamburger-container">
+        <img src="assets/shared/icon-hamburger.svg" alt="Navigation Toggle" class="top__hamburger-container--icon-open">
+        <img src="assets/shared/icon-close.svg" alt="Navigation Toggle" class="top__hamburger-container--icon-close">
+      </button>
+      <nav class="top__nav">
+        <a class="nav__link">
+          <span class="nav__link--no"></span>
+          <span class="nav__link--text"></span>
+        </a>
+        <a class="nav__link">
+          <span class="nav__link--no">00</span>
+          <span class="nav__link--text">HOME</span>
+        </a>
+        <a class="nav__link">
+          <span class="nav__link--no">01</span>
+          <span class="nav__link--text">DESTINATION</span>
+        </a>
+        <a class="nav__link">
+          <span class="nav__link--no">02</span>
+          <span class="nav__link--text">CREW</span>
+        </a>
+        <a class="nav__link">
+          <span class="nav__link--no">03</span>
+          <span class="nav__link--text">TECHNOLOGY</span>
+        </a>
+      </nav>
+    </header>
 
-  So, you want to travel to
-  Space
-  Let’s face it; if you want to go to space, you might as well genuinely go to 
-  outer space and not hover kind of on the edge of it. Well sit back, and relax 
-  because we’ll give you a truly out of this world experience!
+    <main class="home">
+      <section class="home__heading">
+        <h4 class="home__heading--secondary">SO, YOU WANT TO TRAVEL TO</h4>
+      <h1 class="home__heading--primary">SPACE</h1>
+      </section>
+      <p class="home__blurb">Let’s face it; if you want to go to space, you might as well genuinely go to
+        outer space and not hover kind of on the edge of it. Well sit back, and
+        relax because we’ll give you a truly out of this world experience!</p>
+        <section class="home__logo">
+          <h2 class="home__logo--heading">EXPLORE</h2>
+        </section>
+    </main>
+    
 
-  Explore
-
-</body>
+    
+  </body>
+  <script src="script.js"></script>
 </html>
