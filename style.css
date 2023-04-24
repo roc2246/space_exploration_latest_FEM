@@ -2,6 +2,11 @@ html{
     font-size: 16px;
 }
 
+
+p {
+    line-height: 1.5rem;
+}
+
 button{
     cursor: pointer;
 }
@@ -10,11 +15,14 @@ button{
 .top{
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: space-between;
 }
 
 .top__logo-box{
-    display: none;
+    border: solid;
+    border-radius: 50%;
+    border-color: white;
+    background-color: white;
 }
 
 .top__line-box{
@@ -37,10 +45,15 @@ button{
 
 .home{
    display: grid;
+   gap: 2rem;
+}
+
+.home > *{
+    text-align: center;
 }
 
 .home__blurb{
-    max-width: 20rem;
+    max-width: 21rem;
 }
 
 .home__logo{
@@ -52,4 +65,7 @@ button{
     border-radius: 50%;
     height: 10rem;
     width: 10rem;
+
+    margin-left: auto;
+    margin-right: auto;
 }
