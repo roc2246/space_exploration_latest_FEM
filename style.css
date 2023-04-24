@@ -1,71 +1,78 @@
-html{
-    font-size: 16px;
+html {
+  font-size: 16px;
 }
-
 
 p {
-    line-height: 1.5rem;
+  line-height: 1.5rem;
 }
 
-button{
-    cursor: pointer;
+button {
+  cursor: pointer;
 }
 
-
-.top{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.top__logo-box{
-    border: solid;
-    border-radius: 50%;
-    border-color: white;
-    background-color: white;
+.top__logo-box {
+  border: solid;
+  border-radius: 50%;
+  border-color: white;
+  background-color: white;
 }
 
-.top__line-box{
-    display: none;
+.top__line-box {
+  display: none;
 }
 
-.top__hamburger-container{
-    border: none;
-    background-color: transparent;
+.top__hamburger-container {
+  border: none;
+  background-color: transparent;
 }
 
-.top__hamburger-container--icon-close{
-    display: none;
+.top__hamburger-container--icon-close {
+  display: none;
+
 }
 
-.top__nav{
-    display: none;
+.top__nav {
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 2rem;
+
+  background-color: grey;
+
+  position: fixed;
+  z-index: 1;;
 }
 
-
-.home{
-   display: grid;
-   gap: 2rem;
+.home {
+  display: grid;
+  gap: 2rem;
 }
 
-.home > *{
-    text-align: center;
+.home > * {
+  text-align: center;
 }
 
-.home__blurb{
-    max-width: 21rem;
+.home__blurb {
+  max-width: 21rem;
 }
 
-.home__logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.home__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    border: solid;
-    border-radius: 50%;
-    height: 10rem;
-    width: 10rem;
+  border: solid;
+  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
 
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
