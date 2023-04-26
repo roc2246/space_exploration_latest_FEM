@@ -6,6 +6,14 @@ html {
   font-size: 16px;
 }
 
+a{
+  cursor: pointer;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
 body {
   max-width: var(--desktop-resolution);
   margin-left: auto;
@@ -22,9 +30,6 @@ main {
   }
 }
 
-p {
-  line-height: 1.5rem;
-}
 
 button {
   cursor: pointer;
