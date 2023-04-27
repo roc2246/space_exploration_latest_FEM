@@ -86,6 +86,7 @@ main {
 .top__hamburger-container {
   border: none;
   background-color: transparent;
+  margin-right: .5rem;
 }
 
 .top__hamburger-container--icon-close {
