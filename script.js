@@ -30,6 +30,8 @@ navToggle.container.onclick = () => {
 
 function getContainers(block) {
   let headings;
+  let img;
+
   if (block === "crew" || block === "technology") {
     headings = {
       secondary: document.getElementsByClassName(
@@ -40,16 +42,31 @@ function getContainers(block) {
   } else {
     headings = document.getElementsByClassName(`${block}__heading`)[0]
   }
+
+  if(block === "technology"){
+    img = {
+      landscape: document.getElementsByClassName(`${block}__img-cont--landscape`)[0],
+      portrait: document.getElementsByClassName(`${block}__img-cont--portrait`)[0]
+    }
+  } else {
+    img = document.getElementsByClassName(`${block}__img-cont--img`)[0]
+  }
+
+
   return {
     heading: headings,
     info: document.getElementsByClassName(`${block}__info`)[0],
-    imgCont: document.getElementsByClassName(`${block}__img-cont`)[0],
+    img: img,
   };
 }
 
 const techCont = getContainers("technology");
 const crewCont = getContainers("crew");
 const destCont = getContainers("destination");
+
+// console.log(techCont)
+// console.log(crewCont)
+// console.log(destCont)
 
 
 function getSelector(block, element) {
