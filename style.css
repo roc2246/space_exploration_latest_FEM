@@ -7,6 +7,10 @@ html {
   font-size: 16px;
 }
 
+b{
+  margin-right: .25rem;
+}
+
 a {
   cursor: pointer;
 }
@@ -37,7 +41,7 @@ main {
 
 @media (min-width: 1025px) {
   main {
-    margin: 4rem 6rem 1rem 6rem;
+    margin: 4rem 6rem 0 6rem;
   }
 }
 
@@ -88,7 +92,7 @@ main {
   z-index: 1;
 }
 
-@media (min-width: 506px) {
+@media (min-width: 376px) {
   .top__nav {
     display: flex !important;
     align-items: center;
@@ -212,10 +216,10 @@ main {
   margin-left: auto;
   margin-right: auto;
 
-  max-width: 35rem;
+  max-width: 27rem;
 }
 
-@media (min-width: 506px) {
+@media (min-width: 376px) {
   .crew__bio {
     grid-row: 4/5;
   }

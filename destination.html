@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="style.css" />
 
-    <title>Frontend Mentor | Space tourism website</title>
+    <title>Space Tourism - destination</title>
   </head>
   <body>
     <header class="top">
@@ -27,26 +27,22 @@
         <hr class="top__line-box--line" />
       </div>
       <nav class="top__nav">
-        <a class="nav__link" href = "/">
-          <span class="nav__link--no">00</span>
-          <span class="nav__link--text">HOME</span>
-        </a>
-        <a class="nav__link" href = "destination.html">
-          <span class="nav__link--no">01</span>
-          <span class="nav__link--text">DESTINATION</span>
-        </a>
-        <a class="nav__link" href="crew.html">
-          <span class="nav__link--no">02</span>
-          <span class="nav__link--text">CREW</span>
-        </a>
-        <a class="nav__link" href="technology.html">
-          <span class="nav__link--no">03</span>
-          <span class="nav__link--text">TECHNOLOGY</span>
-        </a>
+        <a class="nav__link" href="/"> <b>00</b>HOME </a>
+        <a class="nav__link" href="destination.html"> <b>01</b>DESTINATION </a>
+        <a class="nav__link" href="crew.html"><b>02</b>CREW </a>
+        <a class="nav__link" href="technology.html"><b>03</b>TECHNOLOGY</a>
       </nav>
       <button class="top__hamburger-container">
-        <img src="assets/shared/icon-hamburger.svg" alt="Navigation Toggle" class="top__hamburger-container--icon-open">
-        <img src="assets/shared/icon-close.svg" alt="Navigation Toggle" class="top__hamburger-container--icon-close">
+        <img
+          src="assets/shared/icon-hamburger.svg"
+          alt="Open Nav"
+          class="top__hamburger-container--icon-open"
+        />
+        <img
+          src="assets/shared/icon-close.svg"
+          alt="Close Nav"
+          class="top__hamburger-container--icon-close"
+        />
       </button>
     </header>
 
@@ -56,8 +52,23 @@
         <span class="section-headings--primary">PICK YOUR DESTIONATION</span>
       </h4>
 
-      <h1 class="destination__name"></h1>
-      <p class="destination__description"></p>
+      <h1 class="destination__name">Mars</h1>
+      <p class="destination__description">
+        Don’t forget to pack your hiking boots. You’ll need them to tackle
+        Olympus Mons, the tallest planetary mountain in our solar system. It’s
+        two and a half times the size of Everest!
+      </p>
+
+      <section class="destination__stats">
+        <div class="distance">
+          <h6 class="distance__heading">AVG DISTANCE</h6>
+          <h2 class="distance__stat">225 MIL. KM</h2>
+        </div>
+        <div class="travel">
+          <h6 class="travel__heading">EST TRAVEL TIME</h6>
+          <h2 class="travel__stat">9 MONTHS</h2>
+        </div>
+      </section>
 
       <div class="destination__selector">
         <button class="destination__selector--btn">MOON</button>
@@ -67,12 +78,13 @@
       </div>
 
       <div class="destination__img-cont">
-        <img src="./assets/destination/" alt="" class="destination__img-cont--img">
+        <img
+          src="./assets/destination/image-mars.png"
+          alt="Mars"
+          class="destination__img-cont--img"
+        />
       </div>
-      
     </main>
-
-    
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
