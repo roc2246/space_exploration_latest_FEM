@@ -176,8 +176,7 @@ main {
   margin: 1rem auto 1rem auto;
 }
 
-.crew__role,
-.crew__name,
+.crew__heading,
 .crew__bio {
   text-align: center;
 }
@@ -199,13 +198,6 @@ main {
 }
 
 @media (min-width: 376px) {
-  .crew__role {
-    grid-row: 2/3;
-  }
-
-  .crew__name {
-    grid-row: 3/4;
-  }
 
   .crew__bio {
     grid-row: 4/5;
@@ -220,17 +212,13 @@ main {
 }
 
 @media (min-width: 721px) {
-  .crew__role,
-  .crew__name,
+  .crew__heading,
   .crew__bio {
     grid-column: 1/2;
     text-align: left;
   }
 
-  .crew__role {
-    grid-row: 4/5;
-  }
-  .crew__name {
+  .crew__heading {
     grid-row: 5/6;
   }
   .crew__bio {
