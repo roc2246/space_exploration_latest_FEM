@@ -1,5 +1,6 @@
 :root {
-  --desktop-resolution: 90rem;
+  --desktop-resolution-height: 56.25rem;
+  --desktop-resolution-width: 90rem;
 }
 
 html {
@@ -19,15 +20,22 @@ button {
 }
 
 body {
-  max-width: var(--desktop-resolution);
-  margin: 0 auto 0 auto;
+  max-width: var(--desktop-resolution-width);
+  margin: 1rem auto 0 auto;
+  border: solid;
+}
+
+@media (min-width: 1025px) {
+  body {
+    min-height: var(--desktop-resolution-height);
+  }
 }
 
 main {
   margin: 1rem 1rem 0 1rem;
 }
 
-@media (min-width: 721px) {
+@media (min-width: 1025px) {
   main {
     margin: 4rem 6rem 1rem 6rem;
   }
@@ -44,8 +52,12 @@ main {
 .top__logo-box {
   border: solid;
   border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
   border-color: white;
   background-color: white;
+
+  border: solid;
 }
 
 .top__line-box {
@@ -76,7 +88,7 @@ main {
   z-index: 1;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 506px) {
   .top__nav {
     display: flex !important;
     align-items: center;
@@ -88,6 +100,12 @@ main {
 
   .top__hamburger-container {
     display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .top__logo-box {
+    margin-left: 3rem;
   }
 }
 
@@ -113,15 +131,15 @@ main {
 
   border: solid;
   border-radius: 50%;
-  height: 10rem;
-  width: 10rem;
+  height: 15rem;
+  width: 15rem;
 
   margin: 5rem auto 0 auto;
 
   grid-row: 3/4;
 }
 
-@media (min-width: 721px) {
+@media (min-width: 1025px) {
   .home {
     justify-content: space-between;
     margin-top: 20rem;
@@ -161,7 +179,7 @@ main {
   grid-row: 2/3;
 
   height: auto;
-  max-width: 20rem;
+  max-width: 30rem;
   margin: 0 auto 0 auto;
 }
 
@@ -197,8 +215,7 @@ main {
   max-width: 35rem;
 }
 
-@media (min-width: 376px) {
-
+@media (min-width: 506px) {
   .crew__bio {
     grid-row: 4/5;
   }
@@ -211,7 +228,7 @@ main {
   }
 }
 
-@media (min-width: 721px) {
+@media (min-width: 1025px) {
   .crew__heading,
   .crew__bio {
     grid-column: 1/2;
