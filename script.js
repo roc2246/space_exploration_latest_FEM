@@ -40,6 +40,11 @@ function createSelection(type, text) {
   return btn;
 }
 
+function getSelectorBtns(type) {
+  const btn = document.getElementsByClassName(`${type}__selector--btn`);
+  return btn;
+}
+
 const selectors = {
   destinations: getSelector("destination"),
   crew: getSelector("crew"),
@@ -75,4 +80,11 @@ getData().then((data) => {
   selectors.loadSelections(selectors.destinations, destinations, "destination");
   selectors.loadSelections(selectors.crew, crew, "crew");
   selectors.loadSelections(selectors.technology, technology, "technology");
+
+  const selectBtns ={
+    destination: getSelectorBtns("destination"),
+    crew: getSelectorBtns("crew"),
+    technology: getSelectorBtns("technology")
+  } ;
+
 });
