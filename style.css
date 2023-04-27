@@ -240,7 +240,7 @@ main {
 
   display: flex;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1rem;
 
   margin: 1rem auto 1rem auto;
 
@@ -448,7 +448,7 @@ main {
 
 .crew {
   display: grid;
-  margin-right: 0;
+  /* margin-right: 0; */
 }
 
 .crew__img-cont {
