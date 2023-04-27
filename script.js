@@ -28,6 +28,30 @@ navToggle.container.onclick = () => {
   navToggle.toggle();
 };
 
+function getContainers(block) {
+  let headings;
+  if (block === "crew" || block === "technology") {
+    headings = {
+      secondary: document.getElementsByClassName(
+        `${block}__heading--secondary`
+      )[0],
+      primary: document.getElementsByClassName(`${block}__heading--primary`)[0],
+    };
+  } else {
+    headings = document.getElementsByClassName(`${block}__heading`)[0]
+  }
+  return {
+    heading: headings,
+    info: document.getElementsByClassName(`${block}__info`)[0],
+    imgCont: document.getElementsByClassName(`${block}__img-cont`)[0],
+  };
+}
+
+const techCont = getContainers("technology");
+const crewCont = getContainers("crew");
+const destCont = getContainers("destination");
+
+
 function getSelector(block, element) {
   const ele = document.getElementsByClassName(`${block}__${element}`);
   return ele;

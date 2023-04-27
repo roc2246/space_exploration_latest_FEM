@@ -253,7 +253,7 @@ main {
   background-color: transparent;
 }
 
-.destination__name {
+.destination__heading {
   grid-row: 4/5;
 
   margin: 0;
@@ -262,7 +262,7 @@ main {
   text-align: center;
 }
 
-.destination__description {
+.destination__info {
   grid-row: 5/6;
 
   text-align: center;
@@ -317,12 +317,12 @@ main {
     grid-row: 2/3;
   }
 
-  .destination__name {
+  .destination__heading {
     grid-column: 2/3;
     grid-row: 3/4;
   }
 
-  .destination__description {
+  .destination__info {
     grid-column: 2/3;
     grid-row: 4/5;
   }
@@ -485,7 +485,7 @@ main {
 }
 
 .crew__heading,
-.crew__bio {
+.crew__info {
   text-align: center;
 }
 
@@ -511,7 +511,7 @@ main {
   margin-top: 0;
 }
 
-.crew__bio {
+.crew__info {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
@@ -520,7 +520,7 @@ main {
 }
 
 @media (min-width: 481px) {
-  .crew__bio {
+  .crew__info {
     grid-row: 4/5;
   }
   .crew__selector {
@@ -534,7 +534,7 @@ main {
 
 @media (min-width: 1025px) {
   .crew__heading,
-  .crew__bio {
+  .crew__info {
     grid-column: 1/2;
     text-align: left;
   }
@@ -542,7 +542,7 @@ main {
   .crew__heading {
     grid-row: 5/6;
   }
-  .crew__bio {
+  .crew__info {
     grid-row: 6/7;
     margin: unset;
   }
