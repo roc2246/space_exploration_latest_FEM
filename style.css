@@ -23,7 +23,7 @@ body {
 
 @media (min-width: 1440px) {
   body {
-    margin-right:  auto;
+    margin-right: auto;
   }
 }
 
@@ -86,7 +86,7 @@ main {
 .top__hamburger-container {
   border: none;
   background-color: transparent;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .top__hamburger-container--icon-close {
@@ -116,17 +116,15 @@ main {
 @media (min-width: 481px) {
   .top__nav {
     display: flex !important;
-  flex-direction: row;
+    flex-direction: row;
     align-items: center;
-  justify-content: center;
-  padding: 2rem 1.5rem 2rem 1.5rem;
-
+    justify-content: center;
+    padding: 2rem 1.5rem 2rem 1.5rem;
 
     width: max(28.75rem, 60%);
     max-width: unset;
     height: unset;
     position: unset;
-    
   }
 
   .top__hamburger-container {
@@ -345,7 +343,7 @@ main {
 
   height: auto;
   max-width: 30rem;
-  margin: 0.5rem auto .5rem auto;
+  margin: 0.5rem auto 0.5rem auto;
 }
 
 .technology__img-cont--img {
@@ -401,10 +399,10 @@ main {
 }
 
 @media (min-width: 1025px) {
-.technology > .section-headings{
-  grid-column: 1/3;
-}
-  .technology{
+  .technology > .section-headings {
+    grid-column: 1/3;
+  }
+  .technology {
     margin-right: 0;
   }
   .technology__img-cont {
@@ -468,7 +466,21 @@ main {
 
 .crew__selector {
   grid-row: 3/4;
+
+  display: flex;
+  gap: 1rem;
+
   margin: 1rem auto 1rem auto;
+}
+
+.crew__selector--btn {
+  border: none;
+  background-color: transparent;
+
+  height: 1rem;
+  width: 1rem;
+  background-color: #bbb;
+  border-radius: 50%;
 }
 
 .crew__heading,
