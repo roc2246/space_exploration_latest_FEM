@@ -44,7 +44,23 @@ const selectors = {
   destinations: getSelector("destination"),
   crew: getSelector("crew"),
   technology: getSelector("technology"),
-  loadSelections: (type, text) => {},
+  loadSelections: (selector, data, ele) => {
+    if (selector) {
+      for (let x in data) {
+        let name;
+        if (ele === "crew") {
+          name = "";
+        } else if (ele === "destination") {
+          name = data[x].name.toUpperCase();
+        } else if (ele === "technology") {
+          name = parseInt(x) + 1;
+        }
+
+        const selection = createSelection(`${ele}`, name);
+        selector.append(selection);
+      }
+    }
+  },
 };
 
 async function getData() {
@@ -56,30 +72,7 @@ async function getData() {
 getData().then((data) => {
   const { destinations, crew, technology } = data;
 
-
-  if (selectors.destinations) {
-    for (let x in destinations) {
-      const selection = destinations[x].name.toUpperCase();
-      const destination = createSelection("destination", selection);
-      selectors.destinations.append(destination);
-    }
-  }
-
-  if (selectors.crew) {
-    for (let x in crew) {
-      const selection = "";
-      const crewSelection = createSelection("crew", selection);
-      selectors.crew.append(crewSelection);
-    }
-  }
-
-  if (selectors.technology) {
-    for (let x in technology) {
-      const selection = parseInt(x) + 1;
-      const technology = createSelection("technology", selection);
-      selectors.technology.append(technology);
-    }
-  }
-
-
+  selectors.loadSelections(selectors.destinations, destinations, "destination");
+  selectors.loadSelections(selectors.crew, crew, "crew");
+  selectors.loadSelections(selectors.technology, technology, "technology");
 });
