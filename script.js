@@ -27,3 +27,14 @@ const navToggle = {
 navToggle.container.onclick = () => {
   navToggle.toggle();
 };
+
+async function getData() {
+  const resonse = await fetch("data.json");
+  const data = await resonse.json();
+  return data
+}
+
+getData().then((data) => {
+  const {destinations, crew, technology} = data
+  
+});
