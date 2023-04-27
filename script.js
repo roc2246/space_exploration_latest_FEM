@@ -104,4 +104,22 @@ getData().then((data) => {
     crew: getSelector("crew", "selector--btn"),
     technology: getSelector("technology", "selector--btn"),
   };
+
+  for(let button in selectBtns.destination) {
+    selectBtns.destination[button].onclick = () =>{
+      console.log(destinations[button])
+    }
+  }
+
+  for(let button in selectBtns.crew) {
+    selectBtns.crew[button].onclick = () =>{
+      console.log(crew[button])
+    }
+  }
+
+  for(let button in selectBtns.technology) {
+    selectBtns.technology[button].onclick = () =>{
+      console.log(technology[button])
+    }
+  }
 });
