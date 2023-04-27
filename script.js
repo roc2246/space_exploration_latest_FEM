@@ -28,27 +28,21 @@ navToggle.container.onclick = () => {
   navToggle.toggle();
 };
 
-function getSelector(type) {
-  const selector = document.getElementsByClassName(`${type}__selector`)[0];
-  return selector;
-}
-
-function createSelection(type, text) {
-  const btn = document.createElement("button");
-  btn.className = `${type}__selector--btn`;
-  btn.innerText = `${text}`;
-  return btn;
-}
-
-function getSelectorBtns(type) {
-  const btn = document.getElementsByClassName(`${type}__selector--btn`);
-  return btn;
+function getSelector(block, element) {
+  const ele = document.getElementsByClassName(`${block}__${element}`);
+  return ele;
 }
 
 const selectors = {
-  destinations: getSelector("destination"),
-  crew: getSelector("crew"),
-  technology: getSelector("technology"),
+  destinations: getSelector("destination", "selector")[0],
+  crew: getSelector("crew", "selector")[0],
+  technology: getSelector("technology", "selector")[0],
+  createSelection: (type, text) => {
+    const btn = document.createElement("button");
+    btn.className = `${type}__selector--btn`;
+    btn.innerText = `${text}`;
+    return btn;
+  },
   loadSelections: (selector, data, ele) => {
     if (selector) {
       for (let x in data) {
@@ -61,7 +55,7 @@ const selectors = {
           name = parseInt(x) + 1;
         }
 
-        const selection = createSelection(`${ele}`, name);
+        const selection = selectors.createSelection(`${ele}`, name);
         selector.append(selection);
       }
     }
@@ -81,10 +75,9 @@ getData().then((data) => {
   selectors.loadSelections(selectors.crew, crew, "crew");
   selectors.loadSelections(selectors.technology, technology, "technology");
 
-  const selectBtns ={
-    destination: getSelectorBtns("destination"),
-    crew: getSelectorBtns("crew"),
-    technology: getSelectorBtns("technology")
-  } ;
-
+  const selectBtns = {
+    destination: getSelector("destination", "selector--btn"),
+    crew: getSelector("crew", "selector--btn"),
+    technology: getSelector("technology", "selector--btn"),
+  };
 });
