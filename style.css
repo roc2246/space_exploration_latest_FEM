@@ -512,7 +512,7 @@ main {
 .crew__img-cont {
   grid-row: 2/3;
 
-  max-height: 35rem;
+  max-height: 15rem;
   width: auto;
   margin: 0 auto 0 auto;
 }
