@@ -185,7 +185,7 @@ main {
 @media (min-width: 1025px) {
   .home {
     justify-content: space-between;
-    margin-top: 20rem;
+    margin-top: 12rem;
   }
 
   .home > * {
