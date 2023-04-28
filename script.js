@@ -181,7 +181,8 @@ getData().then((data) => {
     selectBtns.crew[button].onclick = () => {
       selectBtns.changeState(selectBtns.crew, button)
 
-      crewCont.heading.innerHTML = crew[button].name;
+      crewCont.heading.secondary.innerHTML = crew[button].role.toUpperCase();
+      crewCont.heading.primary.innerHTML = crew[button].name;
       crewCont.info.innerHTML = crew[button].bio;
 
       crewCont.img.src = crew[button].images.png;
@@ -196,7 +197,7 @@ getData().then((data) => {
       selectBtns.technology[button].style.color = "white";
       selectBtns.technology[button].style.backgroundColor = "black";
 
-      techCont.heading.innerHTML = technology[button].name;
+      techCont.heading.primary.innerHTML = technology[button].name;
       techCont.info.innerHTML = technology[button].description;
 
       techCont.img.landscape.src = technology[button].images.landscape;
