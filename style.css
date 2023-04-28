@@ -226,7 +226,7 @@ main {
   grid-row: 2/3;
 
   height: auto;
-  width: 20rem;
+  max-width: 20rem;
   margin: 0 auto 0 auto;
 }
 
@@ -241,10 +241,9 @@ main {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  flex-wrap: wrap;
 
   margin: 1rem auto 1rem auto;
-
-  max-width: 24rem;
 }
 
 .destination__selector--btn {
@@ -270,16 +269,6 @@ main {
   margin: 1rem auto 1rem auto;
 }
 
-.destination__stats > * {
-  text-align: center;
-}
-
-.destination__stats > * > h6 {
-  margin-bottom: 0;
-}
-.destination__stats > * > h2 {
-  margin-top: 0.5rem;
-}
 
 .destination__stats {
   display: flex;
@@ -288,6 +277,26 @@ main {
   justify-content: center;
 
   border-top: solid;
+}
+
+.distance > * {
+  text-align: center;
+}
+.distance__heading {
+  margin-bottom: 0;
+}
+.distance__stat {
+  margin-bottom: 0;
+}
+
+.travel > * {
+  text-align: center;
+}
+.travel__heading {
+  margin-bottom: 0;
+}
+.travel__stat {
+  margin-bottom: 0;
 }
 
 @media (min-width: 481px) {
@@ -302,6 +311,7 @@ main {
 }
 
 @media (min-width: 1025px) {
+  
   .destination__img-cont,
   .destination__selector {
     margin-top: 4rem;
@@ -315,11 +325,18 @@ main {
   .destination__selector {
     grid-column: 2/3;
     grid-row: 2/3;
+    width: 24rem;
+    margin-right: auto;
   }
 
   .destination__heading {
     grid-column: 2/3;
     grid-row: 3/4;
+
+    width: 24rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left  ;
   }
 
   .destination__info {
@@ -331,6 +348,14 @@ main {
     grid-column: 2/3;
     grid-row: 5/6;
   }
+  .distance > * {
+    text-align: left;
+  }
+
+  .travel > * {
+    text-align: left;
+  }
+
 }
 
 /* Technology */
@@ -448,7 +473,6 @@ main {
 
 .crew {
   display: grid;
-  /* margin-right: 0; */
 }
 
 .crew__img-cont {
