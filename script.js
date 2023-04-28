@@ -138,14 +138,31 @@ getData().then((data) => {
     destination: getSelector("destination", "selector--btn"),
     crew: getSelector("crew", "selector--btn"),
     technology: getSelector("technology", "selector--btn"),
+    changeState: (buttons, outerCount) => {
+      Object.keys(buttons).forEach((btn) => {
+        if (buttons === selectBtns.destination) {
+          buttons[btn].style.borderBottom = "none";
+        } else if (buttons === selectBtns.crew) {
+          buttons[btn].style.backgroundColor = "#bbb";
+        } else if (buttons === selectBtns.technology) {
+          selectBtns.technology[btn].style.color = "black";
+          selectBtns.technology[btn].style.backgroundColor = "transparent";
+        }
+      });
+      if (buttons === selectBtns.destination) {
+        buttons[outerCount].style.borderBottom = "solid";
+      } else if (buttons === selectBtns.crew) {
+        buttons[outerCount].style.backgroundColor = "red";
+      } else if (buttons === selectBtns.technology) {
+        buttons[outerCount].style.color = "white";
+        buttons[outerCount].style.backgroundColor = "black";
+      }
+    },
   };
 
   for (let button in selectBtns.destination) {
     selectBtns.destination[button].onclick = () => {
-      Object.keys(selectBtns.destination).forEach((btn) => {
-        selectBtns.destination[btn].style.borderBottom = "none";
-      });
-      selectBtns.destination[button].style.borderBottom = "solid";
+      selectBtns.changeState(selectBtns.destination, button)
 
       destCont.heading.innerHTML = destinations[button].name;
       destCont.info.innerHTML = destinations[button].description;
@@ -162,10 +179,7 @@ getData().then((data) => {
 
   for (let button in selectBtns.crew) {
     selectBtns.crew[button].onclick = () => {
-      Object.keys(selectBtns.crew).forEach((btn) => {
-        selectBtns.crew[btn].style.backgroundColor = "#bbb";
-      });
-      selectBtns.crew[button].style.backgroundColor = "red";
+      selectBtns.changeState(selectBtns.crew, button)
 
       crewCont.heading.innerHTML = crew[button].name;
       crewCont.info.innerHTML = crew[button].bio;
@@ -177,10 +191,8 @@ getData().then((data) => {
 
   for (let button in selectBtns.technology) {
     selectBtns.technology[button].onclick = () => {
-      Object.keys(selectBtns.technology).forEach((btn) => {
-        selectBtns.technology[btn].style.color = "black";
-        selectBtns.technology[btn].style.backgroundColor = "transparent";
-      });
+      selectBtns.changeState(selectBtns.technology, button) 
+
       selectBtns.technology[button].style.color = "white";
       selectBtns.technology[button].style.backgroundColor = "black";
 
