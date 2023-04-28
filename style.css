@@ -7,6 +7,7 @@
 
 html {
   font-size: 16px;
+  color: white;
 }
 
 body {
@@ -28,10 +29,22 @@ body {
 }
 
 /* Background Images */
-#home-body{}
-#destination-body{}
-#crew-body{}
-#technology-body{}
+#home-body{
+  background-image: url("/assets/home/background-home-mobile.jpg");
+background-repeat: no-repeat;
+}
+#destination-body{
+  background-image: url("/assets/destination/background-destination-mobile.jpg");
+  background-repeat: no-repeat;
+}
+#crew-body{
+  background-image: url("/assets/crew/background-crew-mobile.jpg");
+  background-repeat: no-repeat;
+}
+#technology-body{
+  background-image: url("/assets/technology/background-technology-mobile.jpg");
+  background-repeat: no-repeat;
+}
 
 /* Elements */
 
@@ -49,6 +62,7 @@ p {
 
 button {
   cursor: pointer;
+  color: white;
 }
 
 /* Containers */
@@ -75,14 +89,11 @@ main {
 }
 
 .top__logo-box {
-  border: solid;
   border-radius: 50%;
   height: 3rem;
   width: 3rem;
-  border-color: white;
   background-color: white;
 
-  border: solid;
 }
 
 .top__line-box {
@@ -119,7 +130,7 @@ main {
   z-index: 1;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 376px) {
   .top__nav {
     display: flex !important;
     flex-direction: row;
@@ -159,7 +170,7 @@ main {
   margin: 0;
   font-size: 4.75rem;
 }
-@media (min-width: 481px) {
+@media (min-width: 376px) {
   .home__heading--secondary {
     margin-bottom: 0;
   }
@@ -180,8 +191,11 @@ main {
 
   border: solid;
   border-radius: 50%;
-  height: 15rem;
-  width: 15rem;
+  /* height: 15rem;
+  width: 15rem; */
+
+  height: 10rem;
+  width: 10rem;
 
   margin: 2rem auto 2rem auto;
 
@@ -232,7 +246,8 @@ main {
   grid-row: 2/3;
 
   height: auto;
-  max-width: 20rem;
+  /* max-width: 20rem; */
+  max-width: 10rem;
   margin: 0 auto 0 auto;
 }
 
@@ -310,7 +325,7 @@ main {
   margin-bottom: 0;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 376px) {
   .destination__stats {
     flex-direction: row;
     justify-content: space-between;
@@ -566,7 +581,7 @@ main {
   max-width: 27rem;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 376px) {
   .crew__info {
     grid-row: 4/5;
   }
