@@ -437,6 +437,10 @@ main {
     margin-right: 0;
   }
 
+  .technology__img-cont--img {
+    margin-left: -1rem;
+  }
+
   .technology__img-cont--landscape {
     display: none;
   }

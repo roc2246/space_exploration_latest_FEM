@@ -87,10 +87,6 @@ const techCont = getContainers("technology");
 const crewCont = getContainers("crew");
 const destCont = getContainers("destination");
 
-// console.log(techCont)
-// console.log(crewCont)
-// console.log(destCont)
-
 function getSelector(block, element) {
   const ele = document.getElementsByClassName(`${block}__${element}`);
   return ele;
@@ -144,21 +140,46 @@ getData().then((data) => {
     technology: getSelector("technology", "selector--btn"),
   };
 
+  /* heading: headings,
+    info: document.getElementsByClassName(`${block}__info`)[0],
+    img: img,
+    distance: distance,
+    travel: travel, */
+
   for (let button in selectBtns.destination) {
     selectBtns.destination[button].onclick = () => {
-      console.log(destinations[button]);
+      destCont.heading.innerHTML = destinations[button].name
+      destCont.info.innerHTML = destinations[button].description
+
+      destCont.img.src = destinations[button].images.png
+      destCont.img.alt = destinations[button].name
+
+      destCont.distance.stat.innerHTML = destinations[button].distance.toUpperCase()
+      destCont.travel.stat.innerHTML = destinations[button].travel.toUpperCase()
+
     };
   }
 
   for (let button in selectBtns.crew) {
     selectBtns.crew[button].onclick = () => {
-      console.log(crew[button]);
+      crewCont.heading.innerHTML = crew[button].name
+      crewCont.info.innerHTML = crew[button].bio
+
+      crewCont.img.src = crew[button].images.png
+      crewCont.img.alt = crew[button].name
     };
   }
 
   for (let button in selectBtns.technology) {
     selectBtns.technology[button].onclick = () => {
-      console.log(technology[button]);
+      techCont.heading.innerHTML = technology[button].name
+      techCont.info.innerHTML = technology[button].description
+
+      techCont.img.landscape.src = technology[button].images.landscape
+      techCont.img.landscape.alt = technology[button].name
+
+      techCont.img.portrait.src = technology[button].images.portrait
+      techCont.img.portrait.alt = technology[button].name
     };
   }
 });
