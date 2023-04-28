@@ -248,8 +248,14 @@ main {
 
 .destination__selector--btn {
   font-size: 1rem;
+  padding-bottom: 1rem;
+
   border: none;
   background-color: transparent;
+}
+
+.destination__selector--btn:nth-child(2) {
+  border-bottom: solid;
 }
 
 .destination__heading {
@@ -268,7 +274,6 @@ main {
   max-width: 24rem;
   margin: 1rem auto 1rem auto;
 }
-
 
 .destination__stats {
   display: flex;
@@ -311,7 +316,6 @@ main {
 }
 
 @media (min-width: 1025px) {
-  
   .destination__img-cont,
   .destination__selector {
     margin-top: 4rem;
@@ -336,7 +340,7 @@ main {
     width: 24rem;
     margin-left: auto;
     margin-right: auto;
-    text-align: left  ;
+    text-align: left;
   }
 
   .destination__info {
@@ -355,7 +359,6 @@ main {
   .travel > * {
     text-align: left;
   }
-
 }
 
 /* Technology */
@@ -397,12 +400,18 @@ main {
 .technology__selector--btn {
   border: solid;
   border-radius: 50%;
+  border-color: black;
   background-color: transparent;
 
   font-size: 1.75rem;
 
   width: 4rem;
   height: 4rem;
+}
+
+.technology__selector--btn:nth-child(1) {
+  color: white;
+  background-color: black;
 }
 
 .technology__heading > * {
@@ -512,23 +521,27 @@ main {
   border-radius: 50%;
 }
 
+.crew__selector--btn:nth-child(4) {
+  background-color: red;
+}
+
 .crew__heading,
 .crew__info {
   text-align: center;
 }
 
-.crew__heading--secondary{
+.crew__heading--secondary {
   font-size: 1.25rem;
 
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.crew__heading--primary{
+.crew__heading--primary {
   font-size: 2.5rem;
 
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .crew__role {

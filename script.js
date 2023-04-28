@@ -140,46 +140,58 @@ getData().then((data) => {
     technology: getSelector("technology", "selector--btn"),
   };
 
-  /* heading: headings,
-    info: document.getElementsByClassName(`${block}__info`)[0],
-    img: img,
-    distance: distance,
-    travel: travel, */
-
   for (let button in selectBtns.destination) {
     selectBtns.destination[button].onclick = () => {
-      destCont.heading.innerHTML = destinations[button].name
-      destCont.info.innerHTML = destinations[button].description
+      Object.keys(selectBtns.destination).forEach((btn) => {
+        selectBtns.destination[btn].style.borderBottom = "none";
+      });
+      selectBtns.destination[button].style.borderBottom = "solid";
 
-      destCont.img.src = destinations[button].images.png
-      destCont.img.alt = destinations[button].name
+      destCont.heading.innerHTML = destinations[button].name;
+      destCont.info.innerHTML = destinations[button].description;
 
-      destCont.distance.stat.innerHTML = destinations[button].distance.toUpperCase()
-      destCont.travel.stat.innerHTML = destinations[button].travel.toUpperCase()
+      destCont.img.src = destinations[button].images.png;
+      destCont.img.alt = destinations[button].name;
 
+      destCont.distance.stat.innerHTML =
+        destinations[button].distance.toUpperCase();
+      destCont.travel.stat.innerHTML =
+        destinations[button].travel.toUpperCase();
     };
   }
 
   for (let button in selectBtns.crew) {
     selectBtns.crew[button].onclick = () => {
-      crewCont.heading.innerHTML = crew[button].name
-      crewCont.info.innerHTML = crew[button].bio
+      Object.keys(selectBtns.crew).forEach((btn) => {
+        selectBtns.crew[btn].style.backgroundColor = "#bbb";
+      });
+      selectBtns.crew[button].style.backgroundColor = "red";
 
-      crewCont.img.src = crew[button].images.png
-      crewCont.img.alt = crew[button].name
+      crewCont.heading.innerHTML = crew[button].name;
+      crewCont.info.innerHTML = crew[button].bio;
+
+      crewCont.img.src = crew[button].images.png;
+      crewCont.img.alt = crew[button].name;
     };
   }
 
   for (let button in selectBtns.technology) {
     selectBtns.technology[button].onclick = () => {
-      techCont.heading.innerHTML = technology[button].name
-      techCont.info.innerHTML = technology[button].description
+      Object.keys(selectBtns.technology).forEach((btn) => {
+        selectBtns.technology[btn].style.color = "black";
+        selectBtns.technology[btn].style.backgroundColor = "transparent";
+      });
+      selectBtns.technology[button].style.color = "white";
+      selectBtns.technology[button].style.backgroundColor = "black";
 
-      techCont.img.landscape.src = technology[button].images.landscape
-      techCont.img.landscape.alt = technology[button].name
+      techCont.heading.innerHTML = technology[button].name;
+      techCont.info.innerHTML = technology[button].description;
 
-      techCont.img.portrait.src = technology[button].images.portrait
-      techCont.img.portrait.alt = technology[button].name
+      techCont.img.landscape.src = technology[button].images.landscape;
+      techCont.img.landscape.alt = technology[button].name;
+
+      techCont.img.portrait.src = technology[button].images.portrait;
+      techCont.img.portrait.alt = technology[button].name;
     };
   }
 });
