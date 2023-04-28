@@ -32,6 +32,9 @@ function getContainers(block) {
   let headings;
   let img;
 
+  let distance;
+  let travel;
+
   if (block === "crew" || block === "technology") {
     headings = {
       secondary: document.getElementsByClassName(
@@ -40,23 +43,43 @@ function getContainers(block) {
       primary: document.getElementsByClassName(`${block}__heading--primary`)[0],
     };
   } else {
-    headings = document.getElementsByClassName(`${block}__heading`)[0]
+    headings = document.getElementsByClassName(`${block}__heading`)[0];
   }
 
-  if(block === "technology"){
+  if (block === "technology") {
     img = {
-      landscape: document.getElementsByClassName(`${block}__img-cont--landscape`)[0],
-      portrait: document.getElementsByClassName(`${block}__img-cont--portrait`)[0]
-    }
+      landscape: document.getElementsByClassName(
+        `${block}__img-cont--landscape`
+      )[0],
+      portrait: document.getElementsByClassName(
+        `${block}__img-cont--portrait`
+      )[0],
+    };
   } else {
-    img = document.getElementsByClassName(`${block}__img-cont--img`)[0]
+    img = document.getElementsByClassName(`${block}__img-cont--img`)[0];
   }
 
+  if (block === "destination") {
+    distance = {
+      heading: document.getElementsByClassName("distance__heading")[0],
+      stat: document.getElementsByClassName("distance__stat")[0],
+    };
+
+    travel = {
+      heading: document.getElementsByClassName("travel__heading")[0],
+      stat: document.getElementsByClassName("travel__stat")[0],
+    };
+  } else {
+    distance = null;
+    travel = null;
+  }
 
   return {
     heading: headings,
     info: document.getElementsByClassName(`${block}__info`)[0],
     img: img,
+    distance: distance,
+    travel: travel,
   };
 }
 
@@ -67,7 +90,6 @@ const destCont = getContainers("destination");
 // console.log(techCont)
 // console.log(crewCont)
 // console.log(destCont)
-
 
 function getSelector(block, element) {
   const ele = document.getElementsByClassName(`${block}__${element}`);
@@ -122,21 +144,21 @@ getData().then((data) => {
     technology: getSelector("technology", "selector--btn"),
   };
 
-  for(let button in selectBtns.destination) {
-    selectBtns.destination[button].onclick = () =>{
-      console.log(destinations[button])
-    }
+  for (let button in selectBtns.destination) {
+    selectBtns.destination[button].onclick = () => {
+      console.log(destinations[button]);
+    };
   }
 
-  for(let button in selectBtns.crew) {
-    selectBtns.crew[button].onclick = () =>{
-      console.log(crew[button])
-    }
+  for (let button in selectBtns.crew) {
+    selectBtns.crew[button].onclick = () => {
+      console.log(crew[button]);
+    };
   }
 
-  for(let button in selectBtns.technology) {
-    selectBtns.technology[button].onclick = () =>{
-      console.log(technology[button])
-    }
+  for (let button in selectBtns.technology) {
+    selectBtns.technology[button].onclick = () => {
+      console.log(technology[button]);
+    };
   }
 });
