@@ -141,6 +141,7 @@ main {
   display: none;
   color: white;
   width: 30%;
+  max-width: 30rem;
   margin-left: 4rem;
   z-index: 0;
   position: absolute;
