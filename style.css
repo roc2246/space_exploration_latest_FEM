@@ -232,7 +232,6 @@ main {
 }
 
 @media (min-width: 401px) {
-
   .home__heading--primary {
     font-size: 8rem;
   }
@@ -648,7 +647,7 @@ main {
 }
 
 .crew__selector--btn:nth-child(4) {
-  background-color: red;
+  background-color: #9dcdee;
 }
 
 .crew__heading,
@@ -701,6 +700,9 @@ main {
 }
 
 @media (min-width: 769px) {
+  .crew{
+    margin-top: 10rem;
+  }
   .crew__heading,
   .crew__info {
     grid-column: 1/2;

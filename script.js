@@ -152,7 +152,7 @@ getData().then((data) => {
       if (buttons === selectBtns.destination) {
         buttons[outerCount].style.borderBottom = "solid";
       } else if (buttons === selectBtns.crew) {
-        buttons[outerCount].style.backgroundColor = "red";
+        buttons[outerCount].style.backgroundColor = "#9dcdee";
       } else if (buttons === selectBtns.technology) {
         buttons[outerCount].style.color = "white";
         buttons[outerCount].style.backgroundColor = "black";
