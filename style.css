@@ -503,7 +503,7 @@ main {
 .technology__selector--btn {
   border: solid;
   border-radius: 50%;
-  border-color: black;
+  border-color: white;
   background-color: transparent;
 
   font-size: 1.75rem;
@@ -513,8 +513,8 @@ main {
 }
 
 .technology__selector--btn:nth-child(1) {
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
 }
 
 .technology__heading > * {

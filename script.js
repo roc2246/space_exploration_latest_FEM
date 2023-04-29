@@ -145,7 +145,7 @@ getData().then((data) => {
         } else if (buttons === selectBtns.crew) {
           buttons[btn].style.backgroundColor = "#bbb";
         } else if (buttons === selectBtns.technology) {
-          selectBtns.technology[btn].style.color = "black";
+          selectBtns.technology[btn].style.color = "white";
           selectBtns.technology[btn].style.backgroundColor = "transparent";
         }
       });
@@ -154,8 +154,8 @@ getData().then((data) => {
       } else if (buttons === selectBtns.crew) {
         buttons[outerCount].style.backgroundColor = "#9dcdee";
       } else if (buttons === selectBtns.technology) {
-        buttons[outerCount].style.color = "white";
-        buttons[outerCount].style.backgroundColor = "black";
+        buttons[outerCount].style.color = "black";
+        buttons[outerCount].style.backgroundColor = "white";
       }
     },
   };
@@ -193,9 +193,6 @@ getData().then((data) => {
   for (let button in selectBtns.technology) {
     selectBtns.technology[button].onclick = () => {
       selectBtns.changeState(selectBtns.technology, button) 
-
-      selectBtns.technology[button].style.color = "white";
-      selectBtns.technology[button].style.backgroundColor = "black";
 
       techCont.heading.primary.innerHTML = technology[button].name;
       techCont.info.innerHTML = technology[button].description;
