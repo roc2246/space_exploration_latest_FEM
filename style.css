@@ -80,6 +80,11 @@ b {
 
 a {
   cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+a:visited{
+  color: white;
 }
 
 h1{
@@ -114,10 +119,19 @@ header{
 
 main {
   margin: 2rem 2rem 0 2rem;
+  max-width: var(--desktop-resolution-width);
 }
 @media (min-width: 769px) {
   main {
-    margin: 2rem 8rem 0 8rem;
+    margin: 2rem 10rem 0 10rem;
+  }
+}
+
+@media (min-width: 1441px) {
+  main {
+    margin-top: 6rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -173,7 +187,7 @@ main {
   gap: 1.5rem;
   padding: 6rem 4rem 6rem 1rem;
 
-  background-color: rgba(81, 62, 252, 0.329);
+  background-color: rgba(7, 1, 63, 0.329);
 
   position: fixed;
   right: 0;
@@ -205,7 +219,6 @@ main {
 @media (min-width: 769px) {
   .top__logo-box {
     margin-left: 3rem;
-    
   }
 }
 
@@ -213,6 +226,12 @@ main {
   .top__line-box{
     display: block;
   }
+}
+
+@media (min-width: 1441px) {
+ .top__nav{
+  gap: 10rem;
+ }
 }
 
 /* Home */
@@ -607,6 +626,12 @@ main {
   }
 }
 
+@media (min-width: 1441px) {
+    .technology {
+      margin-right:auto;
+}
+}
+
 /* Crew */
 
 .crew {
@@ -700,9 +725,6 @@ main {
 }
 
 @media (min-width: 769px) {
-  .crew{
-    margin-top: 10rem;
-  }
   .crew__heading,
   .crew__info {
     grid-column: 1/2;
